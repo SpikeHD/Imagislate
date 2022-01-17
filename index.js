@@ -1,3 +1,4 @@
-import * as lib from './dist/index.js';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const lib = require('./dist/index');
 
-export default lib;
+module.exports = { ...lib };
