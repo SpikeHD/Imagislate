@@ -11,6 +11,6 @@ export class ColorCharmap {
       arr.push(this.findChar(c));
     }
 
-    return arr.join('');
+    return arr;
   }
 }
