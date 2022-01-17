@@ -1,7 +1,7 @@
-import { ColorCharmap } from './Classes/ColorCharmap';
+import { Image2Text } from './Classes/Image2Text';
 import { Text2Pixels } from './Classes/Text2Pixels';
 
 export {
-  ColorCharmap,
+  Image2Text,
   Text2Pixels
 };

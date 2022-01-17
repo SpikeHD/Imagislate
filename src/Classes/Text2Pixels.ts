@@ -1,4 +1,4 @@
-import { ColorCharmap } from './ColorCharmap';
+import { translateString } from '../util/converter';
 import Jimp from 'jimp';
 
 /**
@@ -19,8 +19,7 @@ export class Text2Pixels {
   }
 
   asPixelArray(): string[] {
-    const charmap = new ColorCharmap();
-    const hex = charmap.translateString(this.code);
+    const hex = translateString(this.code);
 
     return hex;
   }
@@ -60,7 +59,7 @@ export class Text2Pixels {
           image.setPixelColor(color, x, y);
         }
       }
-      
+
       image.writeAsync(`${path}/${name}`).catch(e => { throw e; });
     });
 
